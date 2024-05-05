@@ -12,3 +12,10 @@
 <b>Issue:</b> When depositing funds into EigenLayer, round down/ups when converting assset<=>shares must be taken into account. <br>
 <b>Link:</b> https://solodit.xyz/issues/m-1-depositing-to-eigenlayer-can-revert-due-to-round-downs-in-converting-shares-assets-sherlock-rio-network-git <br>
 
+<hr>
+
+<b>Project:</b> EigenLayer <br>
+<b>Author:</b> Code4Arena <br>
+<b>Issue:</b> Lack of validation for length of provided proof. the `computedHash` of the proof was set to `leaf` initialy (before entering the `for-loop`), which means that
+if length of `proof` is zero, the `for-loop` will not be entered and `computedHash` will be equal to `leaf` which will bypass the condition `require(leaf==proof)`<br>
+<b>Link:</b> https://solodit.xyz/issues/h-01-slot-and-block-number-proofs-not-required-for-verification-of-withdrawal-multiple-withdrawals-possible-code4rena-eigenlayer-eigenlayer-contest-git <br>
